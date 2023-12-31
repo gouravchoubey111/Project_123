@@ -8,6 +8,8 @@ import { Login } from "./components/Login";
 import { NavigationBar } from "./components/NavigationBar";
 import { RegistrationForm } from "./components/RegistrationForm";
 import { ViewApplication } from "./components/ViewApplication";
+import { Admin } from "./components/Admin";
+
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
         <Route path="/edit/:adhar" element={<EditForm/>}></Route>
         <Route path="/process/:adhar" element={<ViewApplication/>}></Route>
         <Route path="/Login" element={<Login/>}></Route>
+        <Route path="/Admin" element={<Admin/>}></Route>
         
       </Routes>
       <Footer></Footer>

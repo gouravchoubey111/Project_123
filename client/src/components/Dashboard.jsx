@@ -5,6 +5,7 @@ import img2 from "./images/img2.jpeg";
 import img3 from "./images/img3.jpeg";
 import img4 from "./images/img4.jpeg";
 import img5 from "./images/img5.jpg";
+import img6 from "./images/images3.jpeg";
 
 export function Dashboard() {
   return (
@@ -44,49 +45,52 @@ export function Dashboard() {
         </Row>
 
         <Row className="justify-content-md-center mt-5">
-          <Col lg={3}>
-            <Card>
-              {
-                <Card.Img
-                  variant="top"
-                  src={img4}
-                  className=""
-                  style={{ height: "226px", width: "250px" }}
-                  font-style="Rust"
-                />
-              }
-              <Card.Body>
-                <Card.Title>ELECTRICITY BILL</Card.Title>
+          <Col lg={3} style={{ marginRight: '100px' }}>
+            <Card style={{ width: "22rem" }}>
+              <Card.Img className="img1" variant="top" src={img6} />
+              <Card.Body className="text-center">
+                <Card.Title>Electricity bill</Card.Title>
+                <Card.Text>
+                Electricity is needed in almost every sphere of life now. We need it to lead a comfortable life full of all amenities and services. The world will become dormant without electricity.
+                </Card.Text>
+                {/* <LinkContainer to="https://www.google.com"> */}
 
-                <LinkContainer to="/visa-registration">
-                  <Button variant="primary" className="mt-3">
-                    Pay Now
-                  </Button>
-                </LinkContainer>
+                <Button
+                  variant="primary"
+                  className="mt-3"
+                  href="https://www.toppr.com/guides/essays/save-electricity-essay/"
+                  target="_blank">
+                  Know more...
+                </Button>
+
+                {/* </LinkContainer> */}
               </Card.Body>
             </Card>
           </Col>
-          <Col lg={3}>
-            <Card>
-              {
-                <Card.Img
-                  variant="top"
-                  src={img5}
-                  style={{ height: "190px", width: "300px" }}
-                />
-              }
-              {<hr typeof="rectangle" color="black"></hr>}
-              <Card.Body>
-                <Card.Title>MOBILE BILL</Card.Title>
+          
+          <Col lg={3} style={{ marginRight: '100px' }}>
+            <Card style={{ width: "22rem" }}>
+              <Card.Img className="img1" variant="top" src={img1} />
+              <Card.Body className="text-center">
+                <Card.Title>Mobile bill</Card.Title>
+                <Card.Text>
+                Mobile phones are one of the most commonly used gadgets in today’s world. Everyone from a child to an adult uses mobile phones these days. They are indeed very useful and help us in so many ways.
+                </Card.Text>
+                {/* <LinkContainer to="https://www.google.com"> */}
 
-                <LinkContainer to="/visa-registration">
-                  <Button variant="primary" className="mt-3">
-                    Pay Now
-                  </Button>
-                </LinkContainer>
+                <Button
+                  variant="primary"
+                  className="mt-3"
+                  href="https://www.toppr.com/guides/essays/uses-of-mobile-phones-essay/"
+                  target="_blank">
+                  Know more...
+                </Button>
+
+                {/* </LinkContainer> */}
               </Card.Body>
             </Card>
           </Col>
+
         </Row>
       </Container>
     </Container>

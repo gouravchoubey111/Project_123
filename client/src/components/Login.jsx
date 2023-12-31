@@ -1,9 +1,7 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-undef */
 import React, { useState } from 'react';
+import './Login.css'; // Import the CSS file
 
-export function  Login(){
-const ApplicantLogin = () => {
+export function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -30,9 +28,7 @@ const ApplicantLogin = () => {
 
       if (response.ok) {
         const data = await response.json();
-        // Handle successful login
-        localStorage.setItem('authToken', data.token); // Store token in local storage
-        // Redirect user to another page (replace '/dashboard' with your desired route)
+        localStorage.setItem('authToken', data.token);
         window.location.replace('/dashboard');
       } else {
         setError('Login failed. Please check your credentials.');
@@ -41,14 +37,13 @@ const ApplicantLogin = () => {
       setError('An error occurred. Please try again later.');
     }
 
-    // Reset the form after handling the login
     setEmail('');
     setPassword('');
   };
 
   return (
-    <div>
-      <h1>Applicant Login</h1>
+    <div className="login-container">
+      <h2>Applicant Login</h2>
       {error && <p>{error}</p>}
       <form onSubmit={handleSubmit}>
         <div>
@@ -75,7 +70,4 @@ const ApplicantLogin = () => {
       </form>
     </div>
   );
-};
 }
-
-// export default ApplicantLogin;
